@@ -116,5 +116,14 @@ fun TipCalculatorScreen() {
         Spacer(Modifier.height(32.dp))
         Divider()
         Spacer(Modifier.height(16.dp))
+
+        Text("Чаевые: ${"%.2f".format(tipAmount)} руб.", fontSize = 16.sp)
+        Text("Скидка: ${"%.2f".format(discountAmount)} руб.", fontSize = 16.sp)
+        Text(
+            "Итого:  ${"%.2f".format(total)} руб.",
+            fontSize = 20.sp,
+            color = MaterialTheme.colorScheme.primary
+        )
     }
 }
+
