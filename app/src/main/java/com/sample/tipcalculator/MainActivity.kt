@@ -57,10 +57,12 @@ fun TipCalculatorScreen() {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text("Сумма заказа:", fontSize = 14.sp)
             Spacer(Modifier.width(8.dp))
-            PinkInputField(
+            OutlinedTextField(
                 value = billInput,
                 onValueChange = { if (it.length <= 10 && it.all { c -> c.isDigit() || c == '.' }) billInput = it },
-                isNumber = true
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                modifier = Modifier.weight(1f)
             )
         }
 
@@ -69,10 +71,12 @@ fun TipCalculatorScreen() {
         Row(verticalAlignment = Alignment.CenterVertically) {
             Text("Количество блюд:", fontSize = 14.sp)
             Spacer(Modifier.width(8.dp))
-            PinkInputField(
+            OutlinedTextField(
                 value = dishesInput,
                 onValueChange = { if (it.length <= 3 && it.all { c -> c.isDigit() }) dishesInput = it },
-                isNumber = true
+                singleLine = true,
+                keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number),
+                modifier = Modifier.weight(1f)
             )
         }
 
