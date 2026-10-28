@@ -48,4 +48,12 @@ fun TipCalculatorScreen() {
     val tipAmount = bill * tipPercent / 100.0
     val discountAmount = bill * discountPercent / 100.0
     val total = bill + tipAmount - discountAmount
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp)
+    ) {
+
+    }
 }
