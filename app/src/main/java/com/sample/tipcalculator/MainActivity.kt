@@ -96,5 +96,25 @@ fun TipCalculatorScreen() {
 
         Spacer(Modifier.height(24.dp))
 
+        Row(
+            verticalAlignment = Alignment.CenterVertically,
+            modifier = Modifier.fillMaxWidth()
+        ) {
+            Text("Скидка:", fontSize = 18.sp)
+            Spacer(Modifier.width(16.dp))
+
+            Row(
+                modifier = Modifier.weight(1f),
+                horizontalArrangement = Arrangement.SpaceBetween
+            ) {
+                DiscountRadioOption("3%", 3, discountPercent)
+                DiscountRadioOption("5%", 5, discountPercent)
+                DiscountRadioOption("7%", 7, discountPercent)
+                DiscountRadioOption("10%", 10, discountPercent)
+            }
+        }
+        Spacer(Modifier.height(32.dp))
+        Divider()
+        Spacer(Modifier.height(16.dp))
     }
 }
