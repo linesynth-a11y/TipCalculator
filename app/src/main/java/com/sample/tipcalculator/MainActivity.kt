@@ -141,3 +141,10 @@ fun DiscountRadioOption(label: String, value: Int, selected: Int) {
         Text(label, fontSize = 16.sp)
     }
 }
+fun getDiscount(dishes: Int): Int = when {
+    dishes in 1..2  -> 3
+    dishes in 3..5  -> 5
+    dishes in 6..10 -> 7
+    dishes > 10     -> 10
+    else            -> 0
+}
