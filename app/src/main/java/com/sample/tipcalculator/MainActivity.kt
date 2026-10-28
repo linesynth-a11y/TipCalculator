@@ -77,5 +77,24 @@ fun TipCalculatorScreen() {
         }
 
         Spacer(Modifier.height(24.dp))
+
+        Text("Чаевые:", fontSize = 14.sp)
+        Slider(
+            value = tipPercent,
+            onValueChange = { tipPercent = it },
+            valueRange = 0f..25f,
+            steps = 24, // Шаг 1%
+            modifier = Modifier.fillMaxWidth()
+        )
+        Row(
+            modifier = Modifier.fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Text("0", fontSize = 16.sp)
+            Text("25", fontSize = 16.sp)
+        }
+
+        Spacer(Modifier.height(24.dp))
+
     }
 }
