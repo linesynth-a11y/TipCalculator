@@ -131,3 +131,13 @@ fun TipCalculatorScreen() {
     }
 }
 
+@Composable
+fun DiscountRadioOption(label: String, value: Int, selected: Int) {
+    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+        RadioButton(
+            selected = selected == value,
+            onClick = null
+        )
+        Text(label, fontSize = 16.sp)
+    }
+}
