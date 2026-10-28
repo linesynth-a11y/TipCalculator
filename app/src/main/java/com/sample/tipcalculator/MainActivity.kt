@@ -44,4 +44,8 @@ fun TipCalculatorScreen() {
     val dishes = dishesInput.toIntOrNull() ?: 0
     val discountPercent = getDiscount(dishes)
 
+    val bill = billInput.toDoubleOrNull() ?: 0.0
+    val tipAmount = bill * tipPercent / 100.0
+    val discountAmount = bill * discountPercent / 100.0
+    val total = bill + tipAmount - discountAmount
 }
