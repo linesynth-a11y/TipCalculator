@@ -37,5 +37,11 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun TipCalculatorScreen() {
+    var billInput by remember { mutableStateOf("") }
+    var dishesInput by remember { mutableStateOf("") }
+    var tipPercent by remember { mutableStateOf(5f) }
+
+    val dishes = dishesInput.toIntOrNull() ?: 0
+    val discountPercent = getDiscount(dishes)
 
 }
