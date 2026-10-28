@@ -65,5 +65,17 @@ fun TipCalculatorScreen() {
         }
 
         Spacer(Modifier.height(12.dp))
+
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text("Количество блюд:", fontSize = 14.sp)
+            Spacer(Modifier.width(8.dp))
+            PinkInputField(
+                value = dishesInput,
+                onValueChange = { if (it.length <= 3 && it.all { c -> c.isDigit() }) dishesInput = it },
+                isNumber = true
+            )
+        }
+
+        Spacer(Modifier.height(24.dp))
     }
 }
