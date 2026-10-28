@@ -148,3 +148,11 @@ fun getDiscount(dishes: Int): Int = when {
     dishes > 10     -> 10
     else            -> 0
 }
+
+@Preview(showBackground = true)
+@Composable
+fun PreviewTipCalculator() {
+    TipCalculatorTheme {
+        TipCalculatorScreen()
+    }
+}
