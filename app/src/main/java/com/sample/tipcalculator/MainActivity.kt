@@ -54,6 +54,16 @@ fun TipCalculatorScreen() {
             .fillMaxSize()
             .padding(16.dp)
     ) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Text("Сумма заказа:", fontSize = 14.sp)
+            Spacer(Modifier.width(8.dp))
+            PinkInputField(
+                value = billInput,
+                onValueChange = { if (it.length <= 10 && it.all { c -> c.isDigit() || c == '.' }) billInput = it },
+                isNumber = true
+            )
+        }
 
+        Spacer(Modifier.height(12.dp))
     }
 }
